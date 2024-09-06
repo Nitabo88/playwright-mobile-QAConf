@@ -18,7 +18,7 @@ test.describe('Login Tests', () => {
         expect(page.url()).toBe('https://www.saucedemo.com/v1/inventory.html');
     });
 
-    test('login with invalid credentials', async ({ page }) => {
+    test('login with invalid credentials', async () => {
         await loginPage.login('standard_user', 'secret_sauce1');
         // Add assertions to verify unsuccessful login
         await expect(loginPage.errorLabel).toHaveText('Epic sadface: Username and password do not match any user in this service');
