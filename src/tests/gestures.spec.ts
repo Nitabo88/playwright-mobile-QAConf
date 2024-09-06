@@ -1,7 +1,19 @@
-import { test, expect } from '@playwright/test';
+import {test, expect, devices} from '@playwright/test';
 
-test('login using touchscreen gestures in mobile mode', async ({ page }) => {
-    // Navigate to the login page
+test('login using touchscreen gestures in mobile mode', async ({ playwright }) => {
+    // Use a specific mobile device configuration
+    const iPhone = devices['iPhone 12'];
+
+    // Create a new context with mobile emulation
+    const context = await playwright.chromium.launchPersistentContext('', {
+        ...iPhone,
+        viewport: { width: 390, height: 844 },
+        isMobile: true,
+        hasTouch: true,
+    });
+
+    // Get a new page instance
+    const page = await context.newPage(); // Navigate to the login page
     await page.goto('/');
 
     // Tap on the username input field
