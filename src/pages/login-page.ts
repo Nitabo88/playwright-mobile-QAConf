@@ -20,7 +20,7 @@ export class LoginPage {
     }
 
     async goto() {
-        await this.page.goto('./');
+        await this.page.goto('/');
     }
 
     async login(username: string, password: string) {
@@ -28,4 +28,6 @@ export class LoginPage {
         await this.passwordInput.fill(password);
         await this.loginButton.click();
     }
+
+
 }

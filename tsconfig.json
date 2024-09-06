@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "module": "CommonJS",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "dist"
   },
-  "include": ["src"]
+  "include": ["pages/**/*.ts", "tests/**/*.ts"]
 }

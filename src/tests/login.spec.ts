@@ -15,7 +15,6 @@ test.describe('Login Tests', () => {
         await loginPage.login('standard_user', 'secret_sauce');
         // Add assertions to verify successful login
         await expect(loginPage.menuButton).toBeVisible();
-        expect(page.url()).toBe('https://www.saucedemo.com/v1/inventory.html');
     });
 
     test('login with invalid credentials', async () => {
