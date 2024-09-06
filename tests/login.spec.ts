@@ -1,4 +1,10 @@
-import { test, expect } from '@playwright/test';
+import {test, expect, devices} from '@playwright/test';
+
+test.use({
+    browserName: 'chromium',
+    viewport: devices['Galaxy S9+'].viewport,
+    userAgent: devices['Galaxy S9+'].userAgent,
+});
 
 test('test', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/v1/');
