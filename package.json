@@ -1,0 +1,15 @@
+{
+  "name": "playwright-mobile-QAConf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
